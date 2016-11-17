@@ -6,7 +6,7 @@
 // @author      与你偶遇的树下
 // @icon        http://himg.baidu.com/sys/portraitl/item/da35115e?t=1460692207
 // @license     MIT
-// @version     1.0.1
+// @version     1.1
 // @grant       none
 // ==/UserScript==
 
@@ -15,11 +15,13 @@ function cleanRobotFans() {
     var userList = document.querySelectorAll("#search_list>div.user"),
         btnNextPage,
         userFansNum,
-        userFollowNum;
+        userFollowNum,
+        flip = true;
 
     /**
-     * 因为每页只显示20个粉丝，即userList.length不会大于20
-     * 实际上当前页最多循环20次，且每删除一个机器人都会刷新整个页面
+     * 因为每页只显示20个粉丝，实际上当前页最多循环20次
+     * 删除动作会导致页面刷新，执行得足够快的话，就算删了整页的20个才刷新一次
+     * 刷新之后，未删除前的下一页列表会刷新到当前页来，此时不应翻页，即有删除操作就不应翻页
      */
     for (var i = 0; i < userList.length; i++) {
 
@@ -36,19 +38,24 @@ function cleanRobotFans() {
             window.setTimeout(function () {
                 document.querySelector(".dialogJanswers>input.dialogJbtn").click();
             }, 300);
+
+            // 有删除动作，不应翻页
+            flip = false;
         }
     }
 
-    // 执行到此处说明当前页被for遍历到页尾了都没发现机器人号
+    // 翻页操作
+    if (flip) {
 
-    // 获取下一页按钮
-    btnNextPage = document.querySelector(".pager a.next");
+        // 获取下一页按钮
+        btnNextPage = document.querySelector(".pager a.next");
 
-    // 若还有下一页，翻页
-    if (!!btnNextPage) {
-        btnNextPage.click();
-    } else {
-        // 无下一页，则说明清理完成了
+        // 若还有下一页，翻页
+        if (!!btnNextPage) {
+            btnNextPage.click();
+        } else {
+            // 无下一页，则说明清理完成了
+        }
     }
 
 }
