@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name        自动下载小说
+// @name        自动下载"成为小说家"网站的小说
 // @namespace   wk
-// @description 在小说家txt章节下载页，自动从第一话开始下载所有小说txt档
-// @include     /^http:\/\/ncode\.syosetu\.com\/txtdownload\/top\/ncode\/\S+/
+// @description 在小说家txt章节下载页(里区同样生效)，自动从(列表的)第一话开始下载所有小说txt档
+// @include     /^http:\/\/\w+\.syosetu\.com\/txtdownload\/top\/ncode\/\S+/
 // @updateURL   https://github.com/4thleaf/userscript/raw/master/auto_download_novel/auto_download_novel.meta.js
 // @downloadURL https://github.com/4thleaf/userscript/raw/master/auto_download_novel/auto_download_novel.user.js
 // @author      与你偶遇的树下
