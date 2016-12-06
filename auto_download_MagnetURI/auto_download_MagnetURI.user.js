@@ -15,9 +15,9 @@
 function generateLink() {
     var textContent = window.getSelection().toString().trim();
 
-    if (textContent.length === 32 || textContent.length === 40) {
+    if (textContent.length === 40 || textContent.length === 32) {
 
-        if (textContent.match(/^\w{32,40}/)) {
+        if (textContent.match(/^\w{40} | \w{32}/)) {
             magnetLink = "magnet:?xt=urn:btih:" + textContent;
             // console.log(magnetLink);
 
@@ -31,11 +31,12 @@ function generateLink() {
     }
 
     // console.log(window.getSelection().toString());
+    // console.log(textContent);
 }
 
 /**
  * 接受一个链接，自动开始下载
- * 建立一个a标签并设置其href属性，建议一个鼠标点击事件，让a模拟触发
+ * 建立一个a标签并设置其href属性，建立一个鼠标点击事件，让a模拟触发
  * @param link
  */
 function autoDownload(link) {

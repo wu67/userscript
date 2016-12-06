@@ -7,8 +7,12 @@
 ## clean_robot_fans
 清理百度贴吧的机器人粉丝
 
+[【点我进入 Greasy Fork 安装】](https://greasyfork.org/zh-CN/scripts/25410)
+
 ## auto_download_novel
 在小说家txt章节下载页，自动从第一话开始下载所有小说txt档
+
+[【点我进入 Greasy Fork 安装】](https://greasyfork.org/zh-CN/scripts/25411)
 - 里区(R18)的下载页也生效
 
 ## auto_jd_deliver
@@ -20,6 +24,8 @@
 
 ## auto_download_MagnetURI
 鼠标选中哈希值（散列），会自动进行相应的磁力链接下载；**全域**生效
+
+[【点我进入 Greasy Fork 安装】](https://greasyfork.org/zh-CN/scripts/25241)
 - 有些司机开车(例如琉*神社)，会只丢出32/40位长度的HASH，鼠标左键选中该串即可自动调用下载器进行下载
 - 注意不要选到前一行或者后一行，获取HASH这功能暂时还**没有**容错性
 
