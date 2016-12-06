@@ -8,7 +8,7 @@
 // @author      与你偶遇的树下
 // @icon        http://himg.baidu.com/sys/portraitl/item/da35115e?t=1460692207
 // @license     MIT
-// @version     1.0
+// @version     1.0.2
 // @grant       none
 // ==/UserScript==
 
@@ -17,7 +17,7 @@ function generateLink() {
 
     if (textContent.length === 40 || textContent.length === 32) {
 
-        if (textContent.match(/^\w{40} | \w{32}/)) {
+        if (textContent.match(/^\w{40}|\w{32}/)) {
             magnetLink = "magnet:?xt=urn:btih:" + textContent;
             // console.log(magnetLink);
 
