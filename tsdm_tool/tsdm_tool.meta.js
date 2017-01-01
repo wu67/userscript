@@ -8,6 +8,6 @@
 // @author      与你偶遇的树下
 // @icon        http://himg.baidu.com/sys/portraitl/item/da35115e?t=1460692207
 // @license     MIT
-// @version     1.0
+// @version     1.0.1
 // @grant       none
 // ==/UserScript==

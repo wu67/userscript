@@ -8,21 +8,32 @@
 // @author      与你偶遇的树下
 // @icon        http://himg.baidu.com/sys/portraitl/item/da35115e?t=1460692207
 // @license     MIT
-// @version     1.0
+// @version     1.0.1
 // @grant       none
 // ==/UserScript==
 
 (function sign() {
 
-    var btnSign = document.querySelector("#inner_stat > a:nth-of-type(6)"),
+    // 签到按钮没有特定的类名和ID，而且如果用户绑定了微博或QQ，按钮的位置也会不同，因此只能获取三个可能的位置逐一判断
+    var btn1 = document.querySelector("#inner_stat > a:nth-of-type(5)"),
+        btn2 = document.querySelector("#inner_stat > a:nth-of-type(6)"),
+        btn3 = document.querySelector("#inner_stat > a:nth-of-type(7)"),
         navBarRight = document.getElementById("inner_stat"),
         btnSignByClient = document.createElement("a");
 
     btnSignByClient.innerText = "完成签到 ";
 
-    if (btnSign.innerText === "签到领奖!") {
-        navBarRight.insertBefore(btnSignByClient, btnSign);
-    } else {
+    if (btn3.innerText === "签到领奖!") {
+
+        navBarRight.insertBefore(btnSignByClient, btn3);
+    } else if (btn1.innerText === "签到领奖!") {
+
+        navBarRight.insertBefore(btnSignByClient, btn1);
+    } else if (btn2.innerText === "签到领奖!") {
+
+        navBarRight.insertBefore(btnSignByClient, btn2);
+    }
+    else {
         // 签到已完成，不在页面上插入完成签到链接
     }
 
