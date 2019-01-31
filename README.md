@@ -4,7 +4,7 @@
 - Chrome、Chromium 及相关的浏览器: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 - 其他浏览器请自行查找解决方案
 
-## clean_robot_fans
+## clean_robot_fans 不再维护。垃圾贴吧不玩了
 清理百度贴吧的机器人粉丝
 
 [【点我进入 Greasy Fork 安装】](https://greasyfork.org/zh-CN/scripts/25410)
@@ -15,7 +15,7 @@
 [【点我进入 Greasy Fork 安装】](https://greasyfork.org/zh-CN/scripts/25411)
 - 里区(R18)的下载页也生效
 
-## auto_jd_deliver
+## auto_jd_deliver 已失效
 在京东 自动勾选"京东配送"
 - 尽可能将网页定位到 过滤选项上方的"**面包屑导航**"， 借此跳过导航条下方的**推广商品**，提高体验
 - **不**处理 商品排序规则 和 "只显示有货"选项

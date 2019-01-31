@@ -5,10 +5,9 @@
 // @include     /^http:\/\/\w+\.syosetu\.com\/txtdownload\/top\/ncode\/\S+/
 // @updateURL   https://github.com/wu67/userscript/raw/master/auto_download_novel/auto_download_novel.meta.js
 // @downloadURL https://github.com/wu67/userscript/raw/master/auto_download_novel/auto_download_novel.user.js
-// @author      与你偶遇的树下
+// @author      wu67
 // @icon        http://himg.baidu.com/sys/portraitl/item/da35115e?t=1460692207
 // @license     MIT
 // @version     1.0.1
 // @grant       none
 // ==/UserScript==
- 

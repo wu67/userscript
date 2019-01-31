@@ -5,30 +5,30 @@
 // @include     /^http:\/\/\w+\.syosetu\.com\/txtdownload\/top\/ncode\/\S+/
 // @updateURL   https://github.com/wu67/userscript/raw/master/auto_download_novel/auto_download_novel.meta.js
 // @downloadURL https://github.com/wu67/userscript/raw/master/auto_download_novel/auto_download_novel.user.js
-// @author      与你偶遇的树下
+// @author      wu67
 // @icon        http://himg.baidu.com/sys/portraitl/item/da35115e?t=1460692207
 // @license     MIT
 // @version     1.0.1
 // @grant       none
 // ==/UserScript==
 
-(function () {
+(function() {
 
-    var optionList = document.getElementsByTagName("select")[0].getElementsByTagName("option"),
-        listLength = optionList.length,
-        form = document.getElementsByTagName("form")[0];
+    let optionList = document.getElementsByTagName('select')[0].getElementsByTagName('option')
+    let listLength = optionList.length
+    let form = document.getElementsByTagName('form')[0]
 
-    for (var i = 0; i < listLength; i++) {
+    for (let i = 0; i < listLength; i++) {
 
-        setTimeout(function (j) {
+        setTimeout(function(j) {
 
-            return function () {
-                optionList[j].selected = true;
-                form.submit();
-                console.log("第 " + j + " 部分下载完成");
-            };
+            return function() {
+                optionList[j].selected = true
+                form.submit()
+                console.log('第 ' + j + ' 部分下载完成')
+            }
 
             // 这个下载时间间隔应该是最小的了，再快就会被当做恶意下载封IP了
-        }(i), 6000 * i);
+        }(i), 6000 * i)
     }
-})();
+})()

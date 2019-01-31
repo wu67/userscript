@@ -5,10 +5,10 @@
 // @include     /^https?:*/
 // @updateURL   https://github.com/wu67/userscript/raw/master/auto_download_MagnetURI/auto_download_MagnetURI.meta.js
 // @downloadURL https://github.com/wu67/userscript/raw/master/auto_download_MagnetURI/auto_download_MagnetURI.user.js
-// @author      与你偶遇的树下
+// @author      wu67
 // @icon        http://himg.baidu.com/sys/portraitl/item/da35115e?t=1460692207
 // @license     MIT
-// @version     1.0.3
+// @version     1.0.4
 // @grant       none
 // ==/UserScript==
 
@@ -30,8 +30,6 @@ function generateLink() {
 
     }
 
-    // console.log(window.getSelection().toString());
-    // console.log(textContent);
 }
 
 /**
