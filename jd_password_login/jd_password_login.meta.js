@@ -11,6 +11,6 @@
 // @author      wu67
 // @icon        http://himg.baidu.com/sys/portraitl/item/da35115e?t=1460692207
 // @license     MIT
-// @version      1.0.2
+// @version      1.0.3
 // @grant        none
 // ==/UserScript==

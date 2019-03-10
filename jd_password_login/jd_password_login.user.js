@@ -11,7 +11,7 @@
 // @author      wu67
 // @icon        http://himg.baidu.com/sys/portraitl/item/da35115e?t=1460692207
 // @license     MIT
-// @version      1.0.2
+// @version      1.0.3
 // @grant        none
 // ==/UserScript==
 
@@ -22,6 +22,8 @@ function clickBtn() {
     if (loginBox.style.display.toString() === 'none') {
         btnQr2pw.click()
     }
+
+    document.getElementById('loginsubmit').click()
 }
 
 // document.addEventListener("load", clickBtn);
@@ -29,4 +31,3 @@ function clickBtn() {
     // jd 会使用脚本给密码登录框修改display属性，延时使得函数在jd修改属性后再执行
     setTimeout(clickBtn, 1300)
 })()
-
